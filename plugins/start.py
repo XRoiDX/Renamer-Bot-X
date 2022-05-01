@@ -14,8 +14,8 @@ async def start(client,message):
 	**🎬 ᴅᴏᴄᴜᴍᴇɴᴛ ᴏʀ ᴠɪᴅᴇᴏ 🎥** 𝙰𝚗𝚍 𝙴𝚗𝚝𝚎𝚛 𝙽𝚎𝚠 𝙵𝚒𝚕𝚎𝙽𝚊𝚖𝚎 𝚃𝚘 𝚁𝚎𝚗𝚊𝚖𝚎 𝙸𝚝__
 	""",reply_to_message_id = message.message_id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("𝙐𝙋𝘿𝘼𝙏𝙀𝙎 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 🇮🇳" ,url="https://t.me/XRoid_BotZ") ], 
+	[InlineKeyboardButton("𝙎𝙐𝘽𝙎𝘾𝙍𝙄𝘽𝙀 𝙔𝙏 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 🧐", url="https://bit.ly/3EFfkJN") ]  ]))
 
 
 
@@ -27,7 +27,7 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("**__𝓨𝓸𝓾 𝓐𝓻𝓮 𝓝𝓸𝓽 𝓢𝓾𝓫𝓼𝓬𝓻𝓾𝓫𝓮𝓭 𝓜𝔂 𝓒𝓱𝓪𝓷𝓷𝓮𝓵 𝓟𝓵𝓮𝓪𝓼𝓮 𝓢𝓾𝓫𝓼𝓬𝓻𝓲𝓫𝓮__** ",reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		await message.reply_text("**__𝓨𝓸𝓾 𝓐𝓻𝓮 𝓝𝓸𝓽 𝓢𝓾𝓫𝓼𝓬𝓻𝓾𝓫𝓮𝓭 𝓜𝔂 𝓒𝓱𝓪𝓷𝓷𝓮𝓵 𝓟𝓵𝓮𝓪𝓼𝓮 𝓢𝓾𝓫𝓼𝓬𝓻𝓲𝓫𝓮__** ",reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("ᴜᴩᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
        		return
        date = message.date
        _used_date = find_one(user_id)
@@ -40,7 +40,7 @@ async def send_doc(client,message):
        ltime = str(conversion)
        if left > 0:
        	await app.send_chat_action(message.chat.id, "typing")
-       	await message.reply_text(f"```Sorry Dude am not only for YOU \n Flood control is active so please wait for {ltime}```",reply_to_message_id = message.message_id)
+       	await message.reply_text(f"```ꜱᴏʀʀy ᴅᴜᴅᴇ ᴀᴍ ɴᴏᴛ ꜰᴏʀ ᴜ 😏 \n ꜰʟᴏᴏᴅ ᴄᴏɴᴛʀᴏʟ ɪꜱ ᴀᴄᴛɪᴠᴇ ꜱᴏ ᴩʟᴇᴀꜱᴇ ᴡᴀɪᴛ ꜰᴏʀ {ltime}```",reply_to_message_id = message.message_id)
        else:
        	used_date = find(int(message.chat.id))
        	media = await client.get_messages(message.chat.id,message.message_id)
@@ -49,4 +49,4 @@ async def send_doc(client,message):
        	filename = file.file_name
        	filesize = humanize.naturalsize(file.file_size)
        	fileid = file.file_id
-       	await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid} """,reply_to_message_id = message.message_id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename ",callback_data = "rename"),InlineKeyboardButton("Cancel✖️",callback_data = "cancel")  ]]))
+       	await message.reply_text(f"""__ᴡʜᴀᴛ ᴅᴏ ᴜ ᴡᴀɴᴛ ᴅᴏ ᴛʜɪꜱ ꜰɪʟᴇ?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid} """,reply_to_message_id = message.message_id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 𝙍𝙚𝙣𝙖𝙢𝙚 ",callback_data = "rename"),InlineKeyboardButton("𝘾𝙖𝙣𝙘𝙚𝙡 ✖️",callback_data = "cancel")  ]]))
